@@ -1,0 +1,17 @@
+{
+  "name": "electron.js_learning",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:watch": "npx electronmon --trace-warnings ."
+  },
+  "dependencies": {
+    "electron": "^37.2.6"
+  }
+}
