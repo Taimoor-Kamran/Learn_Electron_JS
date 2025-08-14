@@ -1,20 +1,17 @@
-const {BrowserWindow ,app} = require('electron')
-const url = require('url')
+const {BrowserWindow, app} = require('electron')
 const path = require('path')
+const url = require('url')
 
-function createMainWindow(){
+function createMainWindow (){
     const mainWindow = new BrowserWindow({
-        title: 'Electron',
-        width : 1000,
-        height : 600,
-
+        title: "Electron",
+        width: 1000,
+        height: 600
     })
-
     const startUrl = url.format({
-        pathname : path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'index.html'),
         protocol: 'file'
     })
-
     mainWindow.loadURL(startUrl)
 }
 
