@@ -6,12 +6,11 @@ function createMainWindow() {
         title: "Electron",
         width: 1000,
         height: 600,
+        webPreferences: {
+            contextIsolation: true,
+            preload : path.join(__dirname, 'preload.js')
+        }
     });
-    const startUrl = url.format({
-        pathname: path.join(__dirname, 'my-app', 'build', 'index.html'),
-        protocol: 'file',
-    })
-    mainWindow.loadURL(startUrl)
 }
 
 app.whenReady().then(createMainWindow);
