@@ -1,14 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Navbar from './Navbar';
 
-const Layout:React.FC = () => {
+const Layout: React.FC = () => {
   return (
-    <div>This is layout Page
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/work">Work</a></li>
-      </ul>
+    <div className='mx-auto max-w-4xl'>
+      <Navbar/>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
